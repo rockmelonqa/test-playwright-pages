@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitchen Sink</title>
+  </head>
+  <body>
+    <h1>Kitchen Sink</h1>
+    <hr />
+
+    <table>
+      <tr>
+        <td style="vertical-align: top">
+          <h2>Locators</h2>
+
+          <h3>Attribute</h3>
+          <div data-abd="def">Locate me by Attribute! data-abd="def"</div>
+
+          <h3>Css</h3>
+          <div class="css-selector">Locate me by Css! class="css-selector"</div>
+
+          <h3>Custom test id</h3>
+          <div data-rm-testid="locate-me-by-custom-testid">Locate me by Custom test id! data-rm-testid="locate-me-by-testid"</div>
+
+          <h3>Id</h3>
+          <div id="div-locate-me-by-id">Locate me! id="locate-me-by-id"</div>
+          <h3>Iframe (CSS)</h3>
+          <iframe style="height: 40px" class="locate-me-by-class" src="../frames/frame1.html">Locate me by Iframe (CSS)!</iframe>
+          <h3>Iframe (Id)</h3>
+          <iframe style="height: 40px" id="iframe-locate-me-by-id" src="../frames/frame1.html">Locate me by Iframe (Id)!</iframe>
+          <h3>Iframe (Name)</h3>
+          <iframe style="height: 40px" name="iframe-locate-me-by-name" src="../frames/frame1.html">Locate me by Iframe (Name)!</iframe>
+
+          <h3>Label</h3>
+          <label>Hello <input type="text" value="World. Locate me by Label!" /></label>
+          <h3>Name</h3>
+          <div name="locate-me-by-name">Locate me by name!</div>
+
+          <h3>Placeholder</h3>
+          <input placeholder="locate-me-by-placeholder" value="" title="Locate me by placeholder" />
+
+          <h3>Relative</h3>
+          <div>
+            <div style="display: flex">
+              <div>Don't&nbsp;</div>
+              <div class="locate-child-by-class">Locate me! I'm outside of the parent tag</div>
+            </div>
+            <div class="locate-parent-by-class">
+              Parent and child tag
+              <div class="locate-child-by-class">Locate me!</div>
+            </div>
+          </div>
+
+          <h3>Test Id (default)</h3>
+          <div data-testid="locate-me-by-testid">Locate me by default test id!</div>
+          <h3>Text</h3>
+          <div>Locate me with exact text!</div>
+          <div>Please "Locate me!"</div>
+
+          <h3>Title</h3>
+          <div title="locate-me-by-title">Locate me by Title!</div>
+
+          <h3>xpath</h3>
+          <div>
+            <p>
+              <span>Locate me by xpath!</span>
+              <button>Sign in</button>
+            </p>
+          </div>
+
+          <hr />
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td style="vertical-align: top">
+          <h2>Actions</h2>
+          <h3>Clear</h3>
+          <input class="action-clear" type="text" value="Hello World" />
+          <h3>Click</h3>
+          <label>(text will change to World when button is click)</label>
+          <input class="action-click-input" type="text" value="Hello" />
+          <button class="action-click-button" onclick="document.querySelector('input.action-click-input').value='World'">Click me!</button>
+
+          <h3>Click Popup</h3>
+          <a class="link-click-popup" href="./popups/popup1.html" target="_blank">Click me to Open popup</a>
+          <h3>Input</h3>
+          <input class="action-input" type="text" placeholder="For action input" />
+          <h3>Select Option</h3>
+          <select>
+            <option></option>
+            <option value="hello">Hello</option>
+            <option value="world">World</option>
+          </select>
+
+          <h3>Verify Attribute</h3>
+          <div class="verify-attribute" my-o-attr="my-value" my-o-attr2="my-value-2">Verify me!</div>
+
+          <h3>Verify has text</h3>
+          <div class="verify-has-text">Hello World</div>
+
+          <h3>Verify has value</h3>
+          <input class="verify-has-value" type="text" value="Hello World" />
+
+          <h3>Verify is hidden</h3>
+          <div>The following div is hidden</div>
+          <div class="verify-hidden" style="display: none"></div>
+
+          <h3>Verify editable</h3>
+          <input class="verify-editable" type="text" value="Hello World" />
+
+          <h3>Verify readonly</h3>
+          <input class="verify-readonly" type="text" value="Hello World" readonly />
+
+          <h3>Verify visible</h3>
+          <div class="verify-visible">Hello World</div>
+
+          <h3>Verify title</h3>
+          <div>(The title is Kitchen Sink)</div>
+
+          <h3>Verify title contains</h3>
+          <div>(The title should contain Kitchen or Sink)</div>
+
+          <h3>Verify URL</h3>
+          <div>(The URL should be http://localhost:3000/kitchen-sink.html)</div>
+        </td>
+        <td style="vertical-align: top">
+          <h2>Routines</h2>
+          <input class="routine-input-1" />
+          <h3>Click Popup 2</h3>
+          <a class="link-click-popup2" href="./popups/popup2.html" target="_blank">Click me to Open popup 2</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
